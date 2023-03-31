@@ -7,7 +7,7 @@ const Triangle = () => {
   useEffect(() => {
     new p5((p) => {
       p.setup = () => {
-        p.createCanvas(400, 400).parent(canvasRef.current);
+        p.createCanvas(windowWidth, windowHeight).parent(canvasRef.current);
       };
 
       p.draw = () => {
