@@ -11,7 +11,7 @@ const Triangle = () => {
       };
 
       p.draw = () => {
-        p.background(220);
+        p.background(520);
         p.triangle(100, 100, 300, 100, 200, 300);
       };
     });
