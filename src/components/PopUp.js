@@ -2,6 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import p5 from 'p5';
 import { Modal, Button } from 'bootstrap/dist/js/bootstrap.js';
 
+<p>hello</p>
+
 function PopUp() {
   const canvasRef = useRef(null);
   const [showModal, setShowModal] = useState(false);
