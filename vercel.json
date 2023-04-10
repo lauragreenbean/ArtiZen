@@ -2,16 +2,16 @@
   "version": 2,
   "builds": [
     {
-      "src": "src/App.js",
+      "src": "package.json",
       "use": "@vercel/node"
     },
     {
-      "src": "App.js",
+      "src": "src/App.js",
       "use": "@vercel/static",
-      "output": "public"
+      "output": "out"
     }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "App.js" }
+    { "src": "/(.*)", "dest": "/out/App.js" }
   ]
 }
