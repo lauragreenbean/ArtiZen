@@ -4,7 +4,6 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import 'bootstrap/dist/js/bootstrap.js';
 import  PopUp from './components/PopUp';
-
 function App() {
   return (
    <div>
