@@ -1,44 +1,28 @@
-import React, { useState, useEffect, useRef } from 'react';
-import p5 from 'p5';
-import { Modal, Button } from 'bootstrap/dist/js/bootstrap.js';
 
-<p>hello</p>
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 
 function PopUp() {
-  const canvasRef = useRef(null);
-  const [showModal, setShowModal] = useState(false);
-
-  useEffect(() => {
-    const sketch = (p) => {
-      p.setup = () => {
-        p.createCanvas(400, 400);
-      };
-
-      p.draw = () => {
-        p.background(0);
-        p.fill(255);
-        p.ellipse(p.width / 2, p.height / 2, 50, 50);
-      };
-    };
-
-    new p5(sketch, canvasRef.current);
-  }, []);
-
   return (
-    <>
-      <Button variant="primary" onClick={() => setShowModal(true)}>
-        Open Modal
-      </Button>
-
-      <Modal show={showModal} onHide={() => setShowModal(false)}>
+    <div
+      className="modal show"
+      style={{ display: 'block', position: 'initial' }}
+    >
+      <Modal.Dialog>
         <Modal.Header closeButton>
-          <Modal.Title>Modal Title</Modal.Title>
+          <Modal.Title>Modal title</Modal.Title>
         </Modal.Header>
+
         <Modal.Body>
-          <div ref={canvasRef}></div>
+          <p>Modal body text goes here.</p>
         </Modal.Body>
-      </Modal>
-    </>
+
+        <Modal.Footer>
+          <Button variant="secondary">Close</Button>
+          <Button variant="primary">Save changes</Button>
+        </Modal.Footer>
+      </Modal.Dialog>
+    </div>
   );
 }
 
