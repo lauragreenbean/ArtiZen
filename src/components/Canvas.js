@@ -51,9 +51,7 @@ function Canvas() {
       d = 10;
     }*/
     //generate particles that follow the mouse
-    p5.noStroke();
-    p5.fill(0);
-    p5.ellipse(p5.mouseX, p5.mouseY, 10, 10);
+    
     //map the mouse position to ellipse size
    
 
@@ -74,7 +72,7 @@ function Canvas() {
   const mouseDragged = (p5) => {
     if (p5.mouseDragged) {
     //if mouse dragged, draw a line
-    p5.stroke(0);
+    p5.strokeWeight(5);
     p5.line(p5.mouseX, p5.mouseY, p5.pmouseX, p5.pmouseY);
     }
 

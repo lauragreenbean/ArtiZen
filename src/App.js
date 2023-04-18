@@ -10,7 +10,10 @@ function App() {
     
        <div id="header"><Header/></div>
 
+    <div id="box">
+    <p>hello</p>
 
+    </div>
     <div id="canvas">
      <Canvas/>
     
