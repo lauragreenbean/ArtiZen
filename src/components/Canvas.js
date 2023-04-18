@@ -27,9 +27,7 @@ function Canvas() {
     }
 };
 
-var repelCirc;
   const draw = (p5) => {
-    
     /*
     //generate dots
     col.r = p5.random(0, p5.width);
@@ -51,25 +49,11 @@ var repelCirc;
     if (d > 100) {
       d = 10;
     }*/
-    //create a circle that repels the mouse when it gets close
-    p5.noStroke();
-    p5.fill(0);
-    p5.ellipse(p5.mouseX, p5.mouseY, d, d);
-    d = d + 5;
-
-    if (d > 100) {
-      d = 10;
-    }
-    if (p5.mouseX > p5.width/2) {
-      repelCirc = p5.ellipse(p5.mouseX-50, p5.mouseY-50, d, d);    }
-    else {
-      p5.fill(0, 255, 200);
-    }
-    p5.ellipse(p5.width/2, p5.height/2, 100, 100);
-    p5.fill(0);
-
-
-
+   //use p5.map to change the size of the ellipse based on the mouse position
+  
+  p5.noStroke();
+  p5.fill(0);
+  p5.ellipse(p5.mouseX, p5.mouseY, p5.map(p5.mouseX, 0, p5.width, 0, 100), p5.map(p5.mouseY, 0, p5.height, 0, 100));
 
   }
   //if esc is pressed, clear the canvas
@@ -78,14 +62,19 @@ var repelCirc;
     if (p5.keyCode === p5.ESCAPE) {
       p5.clear();
       p5.background(130);
-    
   }
+  //if c is pressed, change the background color
+  if (p5.keyCode === 67) {
+    p5.background(p5.random(0, 255), p5.random(0, 255), p5.random(0, 255));
+
 }
+
+  }
   const mousePressed = (p5) => {
     if (mousePressed) {
-      p5.fill(0);
-      p5.ellipse(p5.mouseX, p5.mouseY, 10, 10);
-      d = d + 5;
+     //and dragged, draw a line
+      p5.stroke(0);
+      
 
   };
   };
