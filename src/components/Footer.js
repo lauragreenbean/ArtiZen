@@ -5,14 +5,14 @@ class Footer extends React.Component {
         return (
         <div>
         <footer>
-        <p class="text-center">
-            Fake Copyright 2023 &copy; Laura Green
+        <p style={{color: "white"}}>
+            Artizen 2023 &copy; Laura Green
         </p>
         </footer>
         </div>
         );
     }
-}
+};
 
 export default Footer;
 

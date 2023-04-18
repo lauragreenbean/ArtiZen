@@ -11,7 +11,6 @@ ReactDOM.render(<App />, document.getElementById('root'));
 ReactDOM.render(
   <React.StrictMode>
     <App />
-    <p>Hello</p>
   </React.StrictMode>,
   document.getElementById('root')
 );

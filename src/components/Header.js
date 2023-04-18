@@ -5,7 +5,7 @@ class Header extends React.Component {
         return (
         <div id="header">
             <nav id="nav">
-                       <h1 >Artizen</h1>
+            <h1 style={{color: "black"}}>Artizen</h1>
                             
                     </nav>
         </div>
