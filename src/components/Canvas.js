@@ -13,16 +13,17 @@ var col = {
   
 }
 */
-var d = 10;
+
 
 function Canvas() {
 
+  
   const setup = (p5, canvasParentRef) => {
     
     if (canvasParentRef) {
       p5.createCanvas(window.innerWidth, window.innerHeight).parent(canvasParentRef)
       
-      p5.background(130);
+     p5.background(130);
 
     }
 };
@@ -49,38 +50,39 @@ function Canvas() {
     if (d > 100) {
       d = 10;
     }*/
-   //use p5.map to change the size of the ellipse based on the mouse position
-  
-  p5.noStroke();
-  p5.fill(0);
-  p5.ellipse(p5.mouseX, p5.mouseY, p5.map(p5.mouseX, 0, p5.width, 0, 100), p5.map(p5.mouseY, 0, p5.height, 0, 100));
+    //generate particles that follow the mouse
+    p5.noStroke();
+    p5.fill(0);
+    p5.ellipse(p5.mouseX, p5.mouseY, 10, 10);
+    //map the mouse position to ellipse size
+   
+
+    //generate particles that follow the mouse
 
   }
   //if esc is pressed, clear the canvas
-
+  //if mouse clicked and dragged, draw a line
+  
   const keyPressed = (p5) => {
     if (p5.keyCode === p5.ESCAPE) {
-      p5.clear();
+      
       p5.background(130);
-  }
-  //if c is pressed, change the background color
-  if (p5.keyCode === 67) {
-    p5.background(p5.random(0, 255), p5.random(0, 255), p5.random(0, 255));
-
 }
 
   }
-  const mousePressed = (p5) => {
-    if (mousePressed) {
-     //and dragged, draw a line
-      p5.stroke(0);
-      
+  //if mouse clicked and dragged, draw a line
+  const mouseDragged = (p5) => {
+    if (p5.mouseDragged) {
+    //if mouse dragged, draw a line
+    p5.stroke(0);
+    p5.line(p5.mouseX, p5.mouseY, p5.pmouseX, p5.pmouseY);
+    }
 
   };
-  };
+
   
   return(
-  <Sketch setup={setup} draw={draw} mousePressed={mousePressed} keyPressed={keyPressed}/>
+  <Sketch setup={setup} draw={draw} mouseDragged={mouseDragged} keyPressed={keyPressed}/>
   );
         
 }
