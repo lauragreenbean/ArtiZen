@@ -21,7 +21,7 @@ function Canvas() {
   const setup = (p5, canvasParentRef) => {
     
     if (canvasParentRef) {
-      p5.createCanvas(window.innerWidth, window.innerHeight).parent(canvasParentRef)
+      p5.createCanvas(window.innerWidth, window.innerHeight, WEBGL).parent(canvasParentRef)
       
      p5.background(130);
 
@@ -64,7 +64,7 @@ function Canvas() {
   const keyPressed = (p5) => {
     if (p5.keyCode === p5.ESCAPE) {
       
-      p5.background(130);
+      p5.background(217, 199, 227);
 }
 
   }
@@ -73,6 +73,7 @@ function Canvas() {
     if (p5.mouseDragged) {
     //if mouse dragged, draw a line
     p5.strokeWeight(5);
+    p5.ambientLight(255);
     p5.line(p5.mouseX, p5.mouseY, p5.pmouseX, p5.pmouseY);
     }
 
