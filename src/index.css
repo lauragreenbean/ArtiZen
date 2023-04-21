@@ -14,6 +14,61 @@ body {
   border: aqua 10px;;
   background-color: rgba(0, 0, 0, 0.5);
 }
+.video-container {
+  position: relative;
+  width: 560px;
+  height: 315px;
+  overflow: hidden;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  transition: width 0.5s ease-in-out;
+  z-index: 2;
+}
+
+.video-overlay:hover {
+  width: 100%;
+}
+
+.video-player {
+  position: absolute;
+  top: 0;
+  right: -50%;
+  width: 50%;
+  height: 100%;
+  transition: right 0.5s ease-in-out;
+  z-index: 1;
+}
+
+.video-player.hovered {
+  right: 0;
+  z-index: 2;
+}
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 3;
+}
+#video{
+  z-index:2000;
+  width: 250px;
+  height: 300px;
+  position: absolute;
+  right: 20%;
+  top: 30%;
+}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

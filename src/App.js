@@ -6,7 +6,7 @@ import Canvas from './components/Canvas';
 import './index.css';
 import { Container, Dropdown } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import VideoContainer from './components/VideoContainer';
 
 
 
@@ -36,7 +36,9 @@ function App() {
             </Dropdown>
           </Container>
         </div>
-      
+      <div id="video">
+      <VideoContainer/>
+      </div>
       <div id="canvas">
 
         <Canvas />
