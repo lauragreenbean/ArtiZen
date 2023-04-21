@@ -7,7 +7,7 @@
     },
     {
       "src": ".",
-      "use": "@vercel/static",
+      "use": "@vercel/static"
     }
   ]
 }
