@@ -5,5 +5,15 @@
       "src": "/(.*)",
       "dest": "/index.html"
     }
+  ],
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "build",
+      "use": "@vercel/static"
+    }
   ]
 }
