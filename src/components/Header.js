@@ -15,8 +15,8 @@ class Header extends React.Component {
                             Drawing Mode
                         </Dropdown.Toggle>
                         <Dropdown.Menu>
-                          <Dropdown.Item href="/" class="active">Home</Dropdown.Item>
-                            <Dropdown.Item href="/DrawingMode2"> Drawing Mode 2</Dropdown.Item>
+                          <Dropdown.Item href="/" class="active">Simple Line</Dropdown.Item>
+                            <Dropdown.Item href="/DrawingMode2">Ellipses</Dropdown.Item>
                         </Dropdown.Menu>
                     </Dropdown>
                 </Container>

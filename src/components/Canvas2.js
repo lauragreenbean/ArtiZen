@@ -1,7 +1,8 @@
 import React from 'react'
 import Sketch from 'react-p5'
 
-
+var ellipse1;
+var ellipse2;
 
 class Canvas2 extends React.Component {
  render() {
@@ -22,9 +23,14 @@ class Canvas2 extends React.Component {
   const mouseDragged = (p5) => {
     //p5.blendMode(p5.DIFFERENCE);
     p5.stroke(94,176,64);
+    //change stroke color randomly
+    
+    p5.stroke(p5.random(255), p5.random(255), p5.random(255));
     p5.noFill();
    
-    p5.ellipse(p5.mouseX, p5.mouseY, p5.pmouseX, p5.pmouseY);
+    ellipse1=p5.ellipse(p5.mouseX, p5.mouseY, p5.pmouseX, p5.pmouseY);
+    p5.translate(50, 0);
+    ellipse2=p5.ellipse(p5.mouseX, p5.mouseY, p5.pmouseX, p5.pmouseY);
    
     
   

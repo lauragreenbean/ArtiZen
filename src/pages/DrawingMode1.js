@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../index.css';
 import VideoPlayer from '../components/VideoPlayer.js';
 import { Container } from 'react-bootstrap';
-class Home extends React.Component {
+class DrawingMode1 extends React.Component {
   
   render() {
     
@@ -25,4 +25,4 @@ class Home extends React.Component {
   }
 }
 
-export default Home;
+export default DrawingMode1;
