@@ -5,24 +5,24 @@ import VideoPlayer from '../components/VideoPlayer.js';
 
 class DrawingMode2 extends React.Component {
   render() {
-    
-    return(
-      
+
+    return (
+
       <main>
-      <body>
+        <body>
 
-      <Container id="videoP"><VideoPlayer /></Container>
+          <Container id="videoP"><VideoPlayer /></Container>
 
-       <div class="canvas"><Canvas2/><div/>
-       
-       </div>
-       </body>
- </main>
-   
+          <div class="canvas"><Canvas2 /><div />
+
+          </div>
+        </body>
+      </main>
+
     );
-      
+
   }
-      
+
 
 }
 

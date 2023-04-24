@@ -5,23 +5,23 @@ import '../index.css';
 import VideoPlayer from '../components/VideoPlayer.js';
 import { Container } from 'react-bootstrap';
 class DrawingMode1 extends React.Component {
-  
+
   render() {
-    
-    return(
+
+    return (
       <main>
 
-     <body>
-      <Container id="videoP"><VideoPlayer /></Container>
-      <div class="canvas"><Canvas/><div/>
-      
-      </div>
-      </body>
+        <body>
+          <Container id="videoP"><VideoPlayer /></Container>
+          <div class="canvas"><Canvas /><div />
 
-</main>
-  
+          </div>
+        </body>
+
+      </main>
+
     );
-      
+
   }
 }
 
