@@ -1,14 +1,29 @@
 import React from "react";
-
+import { Dropdown, Container } from "react-bootstrap";
 class Header extends React.Component {
     render() {
         return (
-        <div id="header">
-            <nav id="nav">
-            <h1 style={{color: "black"}}>Artizen</h1>
-                            
-                    </nav>
-        </div>
+            <div id="header">
+                     
+
+                <nav id="nav">
+                    
+                    <h1>Artizen</h1>
+                <Container id="dropDown">
+                    <Dropdown >
+                        <Dropdown.Toggle variant=" primary" id="dropdown-basic" >
+                            Drawing Mode
+                        </Dropdown.Toggle>
+                        <Dropdown.Menu>
+                          <Dropdown.Item href="/" class="active">Home</Dropdown.Item>
+                            <Dropdown.Item href="/DrawingMode2"> Drawing Mode 2</Dropdown.Item>
+                        </Dropdown.Menu>
+                    </Dropdown>
+                </Container>
+
+                </nav>
+                </div>
+            
         );
     }
 }

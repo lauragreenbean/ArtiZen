@@ -1,12 +1,27 @@
-import React from "react";
-
+import React from 'react';
+import Canvas from '../components/Canvas.js';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import '../index.css';
+import VideoPlayer from '../components/VideoPlayer.js';
+import { Container } from 'react-bootstrap';
 class Home extends React.Component {
+  
   render() {
-    return (
+    
+    return(
+      <main>
 
-      <h1>Home</h1>
+     <body>
+      <Container id="videoP"><VideoPlayer /></Container>
+      <div class="canvas"><Canvas/><div/>
+      
+      </div>
+      </body>
 
+</main>
+  
     );
+      
   }
 }
 

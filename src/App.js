@@ -1,56 +1,27 @@
 import React from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Canvas from './components/Canvas';
-//import Dropdown from './components/Dropdown';
-import './index.css';
-import { Container, Dropdown } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import VideoContainer from './components/VideoContainer';
-
-
-
-
+import Home from './pages/Home';
+import DrawingMode2 from './pages/DrawingMode2';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 function App() {
-
-
   return (
+    
     <div>
+      
+      <Router>
+      <Header/>
+      <Routes>
 
-      <div id="header"><Header /></div>
-
-      <div id="box" >
-          <Container className='p-4'>
-            <Dropdown>
-              <Dropdown.Toggle variant=" primary" id="dropdown-basic" style={{fontStyle: "white", background: "black"}}>
-                Drawing Mode
-              </Dropdown.Toggle>
-
-              <Dropdown.Menu>
-                <Dropdown.Item href="#/action-1">Simple Line</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">Particles</Dropdown.Item>
-                <Dropdown.Item href="#/action-3">3D Shapes</Dropdown.Item>
-                <Dropdown.Item href="#/action-3">Little Guy</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
-          </Container>
-        </div>
-      <div id="video">
-      <VideoContainer/>
-      </div>
-      <div id="canvas">
-
-        <Canvas />
-
-        <div id="footer"><Footer /></div>
-      </div>
+      <Route exact path="/" element={<Home/>}/>
+      <Route exact path="/DrawingMode2" element={<DrawingMode2/>}/>
+      </Routes> 
+      </Router>
+       <Footer/>
     </div>
-
+    
   );
 }
 
-
-
 export default App;
-
